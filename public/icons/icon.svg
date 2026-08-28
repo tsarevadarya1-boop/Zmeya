@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="36%" r="80%">
+      <stop offset="0%" stop-color="#0d4038"/>
+      <stop offset="60%" stop-color="#072722"/>
+      <stop offset="100%" stop-color="#03100f"/>
+    </radialGradient>
+    <radialGradient id="mRed" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffa3b1"/>
+      <stop offset="45%" stop-color="#ff3b5c"/>
+      <stop offset="100%" stop-color="#7e0d22"/>
+    </radialGradient>
+    <radialGradient id="mAmb" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffe2a8"/>
+      <stop offset="45%" stop-color="#ffb02e"/>
+      <stop offset="100%" stop-color="#8a5407"/>
+    </radialGradient>
+    <radialGradient id="mJade" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#b2f5cd"/>
+      <stop offset="45%" stop-color="#3ddc74"/>
+      <stop offset="100%" stop-color="#0c6b33"/>
+    </radialGradient>
+    <radialGradient id="mAzr" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#b5e2ff"/>
+      <stop offset="45%" stop-color="#2fa8ff"/>
+      <stop offset="100%" stop-color="#0b4a86"/>
+    </radialGradient>
+    <linearGradient id="snake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd873"/>
+      <stop offset="55%" stop-color="#f5b83d"/>
+      <stop offset="100%" stop-color="#a86a12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect x="10" y="10" width="492" height="492" rx="108" fill="none" stroke="#f5b83d" stroke-opacity="0.35" stroke-width="6"/>
+
+  <!-- желоб -->
+  <path d="M88 132 C 210 58, 340 62, 414 132 C 482 196, 452 262, 340 284 C 224 307, 138 330, 156 400"
+        fill="none" stroke="#04161a" stroke-width="78" stroke-linecap="round"/>
+  <path d="M88 132 C 210 58, 340 62, 414 132 C 482 196, 452 262, 340 284 C 224 307, 138 330, 156 400"
+        fill="none" stroke="#0e3531" stroke-width="62" stroke-linecap="round"/>
+
+  <!-- шары -->
+  <circle cx="118" cy="118" r="42" fill="url(#mRed)"/>
+  <circle cx="230" cy="76" r="42" fill="url(#mAmb)"/>
+  <circle cx="352" cy="94" r="42" fill="url(#mJade)"/>
+  <circle cx="432" cy="180" r="42" fill="url(#mAzr)"/>
+  <circle cx="352" cy="272" r="42" fill="url(#mRed)"/>
+
+  <!-- блики -->
+  <ellipse cx="104" cy="102" rx="12" ry="8" fill="#ffffff" opacity="0.85" transform="rotate(-30 104 102)"/>
+  <ellipse cx="216" cy="60" rx="12" ry="8" fill="#ffffff" opacity="0.85" transform="rotate(-30 216 60)"/>
+  <ellipse cx="338" cy="78" rx="12" ry="8" fill="#ffffff" opacity="0.85" transform="rotate(-30 338 78)"/>
+  <ellipse cx="418" cy="164" rx="12" ry="8" fill="#ffffff" opacity="0.85" transform="rotate(-30 418 164)"/>
+  <ellipse cx="338" cy="256" rx="12" ry="8" fill="#ffffff" opacity="0.85" transform="rotate(-30 338 256)"/>
+
+  <!-- змея -->
+  <g transform="translate(196 420) rotate(-14)">
+    <ellipse cx="0" cy="0" rx="86" ry="62" fill="url(#snake)"/>
+    <ellipse cx="-34" cy="6" rx="34" ry="22" fill="#12060a"/>
+    <path d="M-62 -6 l 16 10 l -18 4 z" fill="#fff7e0"/>
+    <path d="M-60 20 l 17 -8 l -17 -6 z" fill="#fff7e0"/>
+    <circle cx="16" cy="-30" r="13" fill="#2ee6a8"/>
+    <circle cx="16" cy="-30" r="6" fill="#04141a"/>
+    <circle cx="52" cy="-16" r="13" fill="#2ee6a8"/>
+    <circle cx="52" cy="-16" r="6" fill="#04141a"/>
+    <path d="M-86 8 q -26 4 -34 -10 m 34 10 q -22 14 -36 10" fill="none" stroke="#ff3b5c" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

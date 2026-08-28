@@ -1,0 +1,29 @@
+{
+  "name": "Путь Змеи — зума × три в ряд",
+  "short_name": "Путь Змеи",
+  "description": "Аркадный гибрид зумы и «три в ряд»: стреляй шарами, собирай тройки одного цвета, устраивай цепные комбо и не дай цепи доползти до пасти змеи.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#04141a",
+  "theme_color": "#04141a",
+  "lang": "ru",
+  "categories": ["games"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

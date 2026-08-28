@@ -1,1 +1,222 @@
 @import "tailwindcss";
+
+@theme {
+  --font-disp: "Russo One", "Rubik", sans-serif;
+  --font-body: "Rubik", sans-serif;
+  --color-abyss: #04141a;
+  --color-pit: #07252a;
+  --color-gold: #f5b83d;
+  --color-jade: #2ee6a8;
+  --color-blood: #ff3b5c;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-abyss);
+  color: #e8f4ef;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── themed shapes ─────────────────────────────── */
+.panel-cut {
+  clip-path: polygon(
+    16px 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%,
+    0 16px
+  );
+}
+.btn-cut {
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%,
+    0 10px
+  );
+}
+.hud-chip {
+  background: rgba(4, 20, 24, 0.86);
+  border: 1px solid rgba(245, 184, 61, 0.3);
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ── buttons ───────────────────────────────────── */
+.btn-gold {
+  font-family: var(--font-disp);
+  letter-spacing: 0.06em;
+  background: linear-gradient(180deg, #ffd873 0%, #f5b83d 55%, #d99322 100%);
+  color: #2a1c04;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 22px rgba(245, 184, 61, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition:
+    transform 0.08s ease,
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.btn-gold:hover {
+  filter: brightness(1.09);
+  box-shadow:
+    0 0 32px rgba(245, 184, 61, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+.btn-gold:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.btn-ghost {
+  font-family: var(--font-disp);
+  letter-spacing: 0.06em;
+  color: #f5d488;
+  border: 1px solid rgba(245, 184, 61, 0.45);
+  background: rgba(245, 184, 61, 0.07);
+  transition:
+    transform 0.08s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.btn-ghost:hover {
+  background: rgba(245, 184, 61, 0.16);
+  box-shadow: 0 0 18px rgba(245, 184, 61, 0.25);
+}
+.btn-ghost:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.btn-jade {
+  font-family: var(--font-disp);
+  letter-spacing: 0.06em;
+  color: #062b20;
+  background: linear-gradient(180deg, #7df5cd 0%, #2ee6a8 55%, #17b57f 100%);
+  box-shadow:
+    0 0 22px rgba(46, 230, 168, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition:
+    transform 0.08s ease,
+    filter 0.15s ease;
+}
+.btn-jade:hover {
+  filter: brightness(1.08);
+}
+.btn-jade:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* ── keycaps ───────────────────────────────────── */
+.kbd {
+  font-family: var(--font-disp);
+  font-size: 11px;
+  color: #ffe9b8;
+  background: rgba(245, 184, 61, 0.12);
+  border: 1px solid rgba(245, 184, 61, 0.4);
+  border-bottom-width: 2px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+/* ── animations ────────────────────────────────── */
+@keyframes comboPop {
+  0% {
+    transform: scale(0.3) rotate(-6deg);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(1.28) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+.anim-combo {
+  animation: comboPop 0.32s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+@keyframes riseIn {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.anim-rise {
+  animation: riseIn 0.45s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+.anim-rise-1 {
+  animation-delay: 0.06s;
+}
+.anim-rise-2 {
+  animation-delay: 0.12s;
+}
+.anim-rise-3 {
+  animation-delay: 0.18s;
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 18px rgba(245, 184, 61, 0.35),
+      0 5px 0 #3a2a08,
+      0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 38px rgba(245, 184, 61, 0.75),
+      0 5px 0 #3a2a08,
+      0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+}
+.anim-title {
+  animation: titleGlow 2.6s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.anim-soft {
+  animation: softPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes recordFlash {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(1.35);
+  }
+}
+.anim-record {
+  animation: recordFlash 0.9s ease-in-out infinite;
+}
